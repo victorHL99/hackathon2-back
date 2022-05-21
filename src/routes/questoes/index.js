@@ -1,11 +1,9 @@
 import { Router } from "express";
-import { cadastrarAssunto, pesquisarAssuntos ,solicitarQuestao } from "../../controllers/questaoController.js";
+import { solicitarQuestao } from "../../controllers/questaoController.js";
 
 const exercicioRouter = Router();
 
 exercicioRouter.get("/questoes/:id", solicitarQuestao );
-exercicioRouter.get("/teste", pesquisarAssuntos);
-exercicioRouter.post("/teste", cadastrarAssunto);
-
+exercicioRouter.get("/teste");
 
 export default exercicioRouter;
