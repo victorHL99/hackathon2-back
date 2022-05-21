@@ -3,6 +3,6 @@ import { solicitarAssuntos } from "../../controllers/inicioController.js";
 
 const inicioRouter = Router();
 
-inicioRouter.get("/" , solicitarAssuntos);
+inicioRouter.get("/assuntos" , solicitarAssuntos);
 
 export default inicioRouter;

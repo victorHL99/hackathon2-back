@@ -1,3 +1,5 @@
 node_modules
 .env
 notas.txt
+package.json
+package-lock.json
