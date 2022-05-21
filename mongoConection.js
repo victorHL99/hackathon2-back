@@ -18,7 +18,7 @@ export default async function connectMongoDB() {
  
     await mongoClient.connect();
 
-    banco_dados = mongoClient.db(process.env.BANCO_DADOS);
+    banco_dados = mongoClient.db(process.env.DATABASE);
     cachedDB = banco_dados;
 
   return { banco_dados, mongoClient };
