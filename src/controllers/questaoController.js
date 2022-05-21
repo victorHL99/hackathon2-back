@@ -6,17 +6,6 @@ dotenv.config();
 
 const { banco_dados } = await connectMongoDB();
 
-export async function solicitarAssuntos(req, res){
-
-    const requisicao = banco_dados.collection("assuntos").find({}).toArray();
-    requisicao.then((r)=>{
-        res.status(200).send(r);
-    });
-    requisicao.catch(()=> {
-        res.status(404).send("Erro ou solicitar assuntos");
-    });
-}
-
 export async function solicitarQuestao(req, res){
     let idQuestao = req.params.id;
 
@@ -53,4 +42,10 @@ export async function cadastrarQuestao(){
         console.log("Erro");
     });
 
+}
+
+async function inserirListaDeQuestoes(){
+    const requisicao = banco_dados.collection("assuntos").updateOne({ 
+        _id: user._id 
+    }, { $set: req.body })
 }
