@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { incio } from "../../controllers/inicioController.js";
+import { solicitarAssuntos } from "../../controllers/questaoController.js";
 
 const inicioRouter = Router();
 
-inicioRouter.get("/" , incio);
+inicioRouter.get("/" , solicitarAssuntos);
 
 export default inicioRouter;
